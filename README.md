@@ -16,9 +16,9 @@ Feature selection using SelectFromModel (with a LinearSVC model) is performed.
 
 ### Model Evaluation
 Cross validation (10 folds) was used to evaluate the model.
-* Classification by sender's email: The mean score was 64.91% with a standard deviation of 1.26%.
-* Classification by post's subject: The mean score was 88.25% with a standard deviation of 0.88%.
-* Classification by both post's subject and sender's email: The mean score was 91.22% with a standard deviation of 0.55%.
+* Classification by sender's email: The mean score was 65.47% with a standard deviation of 1.08%.
+* Classification by post's subject: The mean score was 88.70% with a standard deviation of 0.56%.
+* Classification by both post's subject and sender's email: The mean score was 91.58% with a standard deviation of 0.39%.
 
 ### Directory Setup and Dataset
 The "Data" directory contains 20 text files, each file contains a number of posts relating to a single subject. The dataset was downloaded from:
