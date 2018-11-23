@@ -1,5 +1,5 @@
 # 20-Newsgroup
-Classification of text documents into 20 classes (topics) using only the subject of each document. The idea here is to avoid using the entire post, and just use the subject line to classify each document.
+Classification of text documents into 20 classes (topics) using only the subject of each document. The idea here is to avoid using the entire post, and just use the subject line to classify each document, which hasn't been done to the best of my knowledge.
 
 After keeping only the subject of each document, TfidfVectorizer was used to extract features.
 
