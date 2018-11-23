@@ -28,6 +28,16 @@ def by_email(filename, cls):
     target = [cls for i in range(0, len(X))]
     return X, target
 
+def by_both(filename, cls):
+    data = open(filename)
+    lines = [line for line in data]
+    X = []
+    for i in range(0,len(lines)):
+        if lines[i].startswith('From:') and lines[i+1].startswith('Subject:'):
+            X.append(lines[i].split('From:')[1] + ' ' + lines[i+1].split('Subject:')[1])
+    target = [cls for i in range(0, len(X))]
+    return X, target
+
 if __name__ == '__main__':
     # loop over all text files
     directory = './Data/'
@@ -38,7 +48,8 @@ if __name__ == '__main__':
         if filename.endswith(".txt"):    
             print('Reading:', filename)
             #data, target = by_email(directory+filename, count) 
-            data, target = by_subject(directory+filename, count)
+            #data, target = by_subject(directory+filename, count)
+            data, target = by_both(directory+filename, count)
             for x, y in zip(data, target):
                 X.append(x)
                 Y.append(y)
@@ -48,9 +59,6 @@ if __name__ == '__main__':
     random.shuffle(z)
     X,Y = zip(*z)
 
-
-    for i in range(0,len(X)):
-        print(X[i],'>>>',Y[i])
     # feature extraction
     X_new = TfidfVectorizer(stop_words = 'english').fit_transform(X)
 
@@ -62,7 +70,7 @@ if __name__ == '__main__':
     X_new = SelectFromModel(LinearSVC(penalty='l1', dual=False)).fit_transform(X_new, Y)
     print(X_new.shape)
 
-    clf = LinearSVC(penalty='l2', dual=True)
+    clf = LinearSVC()
     results = cross_val_score(clf, X_new, Y, cv=10, n_jobs = 10)
     print('Mean:', results.mean()*100)
     print('STD:', results.std()*100)
