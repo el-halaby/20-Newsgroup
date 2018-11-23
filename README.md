@@ -10,3 +10,5 @@ Cross validation (10 folds) was used to evaluate the model. The mean score was M
 The "Data" directory contains the 20 text files, each text file contains a number of posts. The dataset was downloaded from:
 https://www.kaggle.com/crawford/20-newsgroups.
 To run the program, make sure to download the "Data" folder and execute the script "newsgroup.py".
+
+If you find any errors, mistakes or bugs, please let me know. Feel free to comment.
