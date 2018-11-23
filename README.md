@@ -21,7 +21,7 @@ Cross validation (10 folds) was used to evaluate the model.
 * Classification by both post's subject and sender's email: The mean score was 98.64% with a standard deviation of 0.21%.
 
 ### Directory Setup and Dataset
-The "Data" directory contains the 20 text files, each text file contains a number of posts. The dataset was downloaded from:
+The "Data" directory contains 20 text files, each file contains a number of posts relating to a single subject. The dataset was downloaded from:
 https://www.kaggle.com/crawford/20-newsgroups.
 To run the program, make sure to download the "Data" folder and execute the script "newsgroup.py".
 
