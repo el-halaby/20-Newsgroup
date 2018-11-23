@@ -1,5 +1,5 @@
-# 20-Newsgroup
-Classification of text documents into 20 classes (topics) using only the subject (or sender's email) of each document. The idea here is to avoid using the entire post, and just use the subject line (or sender's email) to classify each document, which hasn't been done to the best of my knowledge.
+# Text document classification using only subject line or sender's email.
+Classification of text documents from the "20-newsgroups" dataset using only the subject (or sender's email) of each document. The idea here is to avoid using the entire post, and just use the subject line (or sender's email) to classify each document, which hasn't been done to the best of my knowledge.
 
 ### Requirements
 * Python 3.6.1 or above
