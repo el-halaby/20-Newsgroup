@@ -1,4 +1,4 @@
-# Text document classification of 20 Newsgroups dataset using Metadata
+# Text document classification of "20 Newsgroups" dataset using Metadata
 Classification of text documents from the "20-newsgroups" dataset using only the subject or sender's email (or both) of each document. The idea here is to avoid using the entire post, and just use metadata from posts to classify each document, which hasn't been done to the best of my knowledge.
 
 ### Requirements
