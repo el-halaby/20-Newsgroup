@@ -14,7 +14,7 @@ def by_subject(filename, cls):
     X = []
     for i in range(0,len(lines)):
         if lines[i].startswith('Subject:') and lines[i-1].startswith('From:'):
-            X.append(lines[i])
+            X.append(lines[i].split('Subject:')[1])
     target = [cls for i in range(0, len(X))]
     return X, target
 
@@ -24,7 +24,7 @@ def by_email(filename, cls):
     X = []
     for i in range(0,len(lines)):
         if lines[i].startswith('From:') and lines[i+1].startswith('Subject:'):
-            X.append(lines[i])
+            X.append(lines[i].split('From:')[1])
     target = [cls for i in range(0, len(X))]
     return X, target
 
@@ -48,6 +48,9 @@ if __name__ == '__main__':
     random.shuffle(z)
     X,Y = zip(*z)
 
+
+    for i in range(0,len(X)):
+        print(X[i],'>>>',Y[i])
     # feature extraction
     X_new = TfidfVectorizer(stop_words = 'english').fit_transform(X)
 
