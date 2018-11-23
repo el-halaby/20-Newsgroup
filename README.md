@@ -1,5 +1,5 @@
 # Text document classification using only subject line or sender's email.
-Classification of text documents from the "20-newsgroups" dataset using only the subject (or sender's email) of each document. The idea here is to avoid using the entire post, and just use the subject line (or sender's email) to classify each document, which hasn't been done to the best of my knowledge.
+Classification of text documents from the "20-newsgroups" dataset using only the subject or sender's email (or both) of each document. The idea here is to avoid using the entire post, and just use metadata from posts to classify each document, which hasn't been done to the best of my knowledge.
 
 ### Requirements
 * Python 3.6.1 or above
@@ -18,6 +18,7 @@ Feature selection using SelectFromModel (with a LinearSVC model) is performed.
 Cross validation (10 folds) was used to evaluate the model. 
 * Classification by post's subject: The mean score was 96.81% with a standard deviation of 0.31%.
 * Classification by sender's email: The mean score was 89.35% with a standard deviation of 0.45%.
+* Classification by both post's subject and sender's email: The mean score was 98.64% with a standard deviation of 0.21%.
 
 ### Directory Setup and Dataset
 The "Data" directory contains the 20 text files, each text file contains a number of posts. The dataset was downloaded from:
