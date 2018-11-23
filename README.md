@@ -8,5 +8,5 @@ The obtained features are then fed to MaxAbsScaler for feature scaling, then fin
 Cross validation (10 folds) was used to evaluate the model. The mean score was Mean: 96.81% with a standard deviation of 0.31%.
 
 The "Data" directory contains the 20 text files, each text file contains a number of posts. The dataset was downloaded from:
-https://www.kaggle.com/crawford/20-newsgroups
+https://www.kaggle.com/crawford/20-newsgroups.
 To run the program, make sure to download the "Data" folder and execute the script "newsgroup.py".
